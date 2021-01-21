@@ -33,7 +33,7 @@ Clone the repository
 `git clone https://github.com/2012JavaReston/ExpenseReimbursement-Project-1.git`  
 Run the application on the Apache Tomcat 9.0 server, and go to http://localhost:8080/ExpenseReimbursementSystem/ers/landing<br/><br/>
 You will be presented with the landing page:   <br/>
-[Landing Page Screen Shot](/Lester_Young_P1/images/ERS.png)
+[Landing Page Screen Shot](/images/ERS.png)
 
 ## Contributers
 LYoung0789
