@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Request</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/ExpenseReimbursementSystem/newRequest.css">
+</head>
+<body>
+    <div id="page-container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="http://localhost:8080/ExpenseReimbursementSystem/ers/home">Revature</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ">
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="http://localhost:8080/ExpenseReimbursementSystem/ers/new/Expense">Create a new claim</a>
+                </li>
+         		<li class="nav-item">
+                	<a class="nav-link" href="http://localhost:8080/ExpenseReimbursementSystem/ers/view/Expenses">View Claims</a>
+            	</li>
+                
+              </ul>
+    
+            </div>
+           	<form method="GET" action="http://localhost:8080/ExpenseReimbursementSystem/ers/logout">
+        		<button type="submit" class="btn btn-warning btn-md">Logout</button>
+        	</form>
+        </nav>
+
+        <h1 id="title-newClaim">Request Reimbursement</h1>
+        
+        <div id="form-container">
+            <div class= "row mx-auto">
+                <div class="col col-9 mx-auto">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">New Reimbursement Request</h5>
+                        <form onSubmit=handleSubmit(event)>
+                            <label>Pick a Category</label>
+                             <div class="form-group">
+                                <label for="categoryForm">Category:</label>
+                                <select class="form-control" id="categoryForm">
+                                  <option>Lodging</option>
+                                  <option>Travel</option>
+                                  <option>Food</option>
+                                  <option>Supplies</option>
+                                  <option>Other</option>
+                                </select>
+                            </div>
+                              <br>
+                            <div class="form-group">
+                                <label>Please select a Date Range</label>
+                                <div class="input-group input-daterange">
+                                    <input type="date" id ="dateFrom" class="form-control" required>
+                                    <div class="input-group-addon"> to </div>
+                                    
+                                    <input type="date" id="dateTo" class="form-control" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <label for="total">Amount Requested</label>
+                              <input type="text" id="amountRequested" class="form-control" id="total" placeholder="USD" required>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea id="description" class="form-control" id="description" rows="3"></textarea>
+                              </div>
+                              <br>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+            </div>
+
+        </div>
+        <div id="footer-wrap">
+            <footer id="footer" >
+                <div class="container text-center">
+                  <small>Copyright &copy; Lester Young</small>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="/ExpenseReimbursementSystem/newRequest.js"></script>
+</body>
+</html>

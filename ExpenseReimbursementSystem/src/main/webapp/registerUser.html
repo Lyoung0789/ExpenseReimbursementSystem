@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/ExpenseReimbursementSystem/login.css">
+
+    <title>New User</title>
+</head>
+<body>
+    <div id="page-container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="http://localhost:8080/ExpenseReimbursementSystem/ers/login">Revature</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <h1 id="title-newUser">Register New User</h1>
+        
+        <div id="form-container">
+            <div class= "row mx-auto">
+                <div class="col col-7 mx-auto">
+                    <div class="card">
+                      <div class="card-body">
+                        <form onSubmit = handleSubmit(event)>
+                              <div class="form-group">
+                                <label for="email">Email: </label>
+                                <input type="email" class="form-control" id="email" placeholder= "example@example.com">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="password">Password: </label>
+                                <input type="password" class="form-control" id="password">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label >Name:  </label>
+                                <input type="text" class="form-control" id="fName" placeholder= "First Name">
+                                <input type="text" class="form-control" id="lName" placeholder= "Last Name">
+                            </div>
+                             
+                            <div class="form-group">
+                                <label for="streetAddress">Address: </label>
+                                <input type="text" class="form-control" id="streetAddress" placeholder= "Street Address">
+                               
+                                <input type="text" class="form-control" id="city" placeholder= "City">
+                                
+                                <input type="text" class="form-control" id="state" placeholder= "State">
+    
+                                <input type="text" class="form-control" id="zipcode" placeholder= "Zipcode">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="positionForm">Position:</label>
+                                <select class="form-control" id="positionForm">
+                                  <option>Software Engineer</option>
+                                  <option>Technical Support Engineer</option>
+                                  <option>Computer Engineer</option>
+                                  <option>Support Staff</option>
+                                  <option>Network Engineer</option>
+                                  <option>Other</option>
+                                </select>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+            </div>
+
+        </div>
+        <div id="footer-wrap">
+            <footer id="footer" >
+                <div class="container text-center">
+                  <small>Copyright &copy; Lester Young</small>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="/ExpenseReimbursementSystem/registerUser.js"></script>
+</body>
+</html>
